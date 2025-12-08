@@ -22,11 +22,9 @@ The repository includes the Tor executables, so the structure is plug-and-play:
 ```text
 Tor-Proxy-Rotator/
 │
-├── run_tor_rotator.bat     # The main script manager
+├── run_tor.bat     # The main script manager
 ├── tor.exe                 # Tor Engine (Included)
 ├── tor-gencert.exe         # Tor Utility (Included)
-├── geoip                   # GeoIP Data (Included)
-└── geoip6                  # GeoIPv6 Data (Included)
 ```
 
 ## 🚀 Installation & Usage
@@ -39,7 +37,7 @@ Tor-Proxy-Rotator/
     ```
 
 2.  **Run the Rotator:**
-    Double-click **`run_tor_rotator.bat`**.
+    Double-click **`run_tor.bat`**.
 
 3.  **Wait for Bootstrap:**
     The script will launch Tor in the background. Wait a few seconds for the status to show **RUNNING**.
@@ -50,13 +48,13 @@ The console window accepts the following commands while running:
 
 | Key | Action |
 | :--- | :--- |
-| **ENTER** | **Force Rotate:** Sends the signal to get fresh IPs immediately. |
+| **R** | **Force Rotate:** Sends the signal to get fresh IPs immediately. |
 | **Q** | **Quit:** Kills the Tor process, deletes temp files, and closes the window. |
 | **(Wait)** | **Auto-Rotate:** The script will automatically rotate IPs every 5 minutes. |
 
 ## ⚙️ Configuration
 
-You can edit the settings directly at the top of the `run_tor_rotator.bat` file using any text editor:
+You can edit the settings directly at the top of the `run_tor.bat` file using any text editor:
 
 ```batch
 :: --- CONFIGURATION ---
